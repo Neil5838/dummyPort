@@ -17,6 +17,12 @@ li {
 }
 
 nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
     background-color: #fff;
     box-shadow: 1px 1px 10px #ddd;
 }
@@ -73,6 +79,86 @@ nav {
 .show-links {
     height: 142px;
 }
+
+/* hero-section */
+
+#hero-section {
+    /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('./images/abstract.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-contents {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.titles {
+    margin-bottom: 2rem;
+}
+
+.titles h3 {
+    font-size: clamp(1.2rem, 2vw, 1.85rem);
+    /* Min: 1.2rem, Preferred: 2vw, Max: 1.85rem */
+    color: #262626;
+    font-family: "Roboto", serif;
+}
+
+.titles h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    /* Min: 2.5rem, Preferred: 5vw, Max: 4rem */
+    color: darkcyan;
+    font-family: "Roboto", serif;
+    letter-spacing: 1.6px;
+}
+
+
+.titles p {
+    font-family: "Roboto", serif;
+    color: rgb(99, 99, 99);
+    margin-top: 6px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-buttons a {
+    font-family: "Open Sans", serif;
+    color: #fff;
+    background-color: darkcyan;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 800px) {
