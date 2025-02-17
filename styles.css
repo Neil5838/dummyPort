@@ -42,7 +42,7 @@ nav {
 
 .logo {
     text-decoration: none;
-    color: blue;
+    color: #262626;
     font-family: "Roboto", serif;
     font-size: 1.55rem;
     letter-spacing: 1.6px;
@@ -126,6 +126,7 @@ nav {
     font-family: "Roboto", serif;
     color: rgb(99, 99, 99);
     margin-top: 6px;
+    font-size: 18px;
 }
 
 .hero-buttons {
