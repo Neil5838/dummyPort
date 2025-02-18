@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: #262626;
@@ -184,24 +188,24 @@ nav {
 .projects {
     width: 100%;
     max-width: 95vw;
-    margin: 0 auto;
-    margin-bottom: 1rem;
+    margin: 3rem auto;
 }
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
 }
 
 .projects header {
-    padding: 40px 0;
+    padding-bottom: 40px;
 }
 
 .projects header h2 {
     font-family: "Roboto", serif;
     font-size: 1.40rem;
     font-weight: 500;
+    color: #00a0da;
 }
 
 .projects header p {
@@ -214,11 +218,14 @@ nav {
 
 .project-cards .card {
     border-radius: 10px;
-    background-color: #f1f1f1;
+    background-color: #f6fcfc;
+    box-shadow: 1px 1px 5px #a3a3a3;
+
     transition: all 0.4s ease;
 }
 
 .project-cards .card:hover {
+    cursor: pointer;
     transform: scale(1.05);
     box-shadow: 1px 1px 10px #a3a3a3;
 }
@@ -252,13 +259,90 @@ nav {
 .project-cards .desc .preview a {
     text-decoration: none;
     font-family: "Open Sans", serif;
-    background-color: lightgray;
+    background-color: #d3edf4;
+    font-size: 14px;
     color: rgb(80, 80, 80);
     padding: 2px 12px;
     border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.project-cards .desc .preview a:hover {
+    background-color: #a4e4f4;
+}
+
+footer {
+    background-color: #262626;
+    padding: 35px 4%;
+    color: white;
+
+    text-align: center;
+}
+
+footer h3 {
+    font-family: "Open Sans", serif;
+    color: lightgray;
+    font-weight: 500;
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+    /* letter-spacing: 1.4px; */
+
+}
+
+footer p {
+    font-family: "Open Sans", serif;
+    color: rgb(182, 182, 182);
+    font-size: 1rem;
+}
+
+footer .footer-social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+footer .footer-right-text {
+    color: rgb(154, 154, 154);
+    margin-top: 12px;
+    font-size: small;
 }
 
 
+.goto-top {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 5;
+
+    text-decoration: none;
+    background-color: #a4e4f4;
+    color: #00a0da;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: small;
+    border-radius: 15px;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goto-top.show-top-btn {
+    transform: translateY(10px);
+    opacity: 1;
+    pointer-events: all;
+}
 
 
 
@@ -281,6 +365,10 @@ nav {
 @media (max-width: 768px) {
     #hero-section {
         height: 85vh;
+    }
+
+    .projects {
+        max-width: 95vw;
     }
 
     .titles h2 {
