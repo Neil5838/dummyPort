@@ -34,6 +34,33 @@ nav {
     padding: 1rem;
 }
 
+.special-buttons {
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* gap: 1rem; */
+}
+
+.social-icons-for-desk {
+    display: none;
+}
+
+.social-icons a {
+    display: block;
+    font-size: 1.125rem;
+    color: #262626;
+    margin-left: 22px;
+}
+
+
 .links {
     height: 0;
     overflow: hidden;
@@ -284,12 +311,24 @@ nav {
 
 
 @media (min-width: 800px) {
-    #nav-toggle {
+    #nav-toggle, .social-icons {
         display: none;
     }
 
     .nav-header {
         padding: 0;
+    }
+
+    .social-icons-for-desk {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icons-for-desk a {
+        display: block;
+        font-size: 1.125rem;
+        color: #262626;
+        margin-left: 22px;
     }
 
     .links {
@@ -302,12 +341,10 @@ nav {
 
     .links a {
         padding: 0;
-        transition: all 0.4s ease;
     }
 
     .links a:hover {
         background-color: transparent;
-        color: blue;
     }
 
     nav {
